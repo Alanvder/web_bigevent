@@ -35,7 +35,7 @@ $(function () {
         e.preventDefault()
         console.log($('#uname').val());
         console.log($('#pws').val());
-        $.post("http://www.liulongbin.top:3007/api/reguser", { username: $('#uname').val(), password: $('#pws').val() },
+        $.post("/api/reguser", { username: $('#uname').val(), password: $('#pws').val() },
             function (res) {
                 console.log(res);
                 if (res.status !== 0) {
@@ -57,7 +57,7 @@ $(function () {
         e.preventDefault();
         $.ajax({
             type: "POST",
-            url: "http://www.liulongbin.top:3007/api/login",
+            url: "/api/login",
             data: $(this).serialize(),
 
             success: function (res) {
