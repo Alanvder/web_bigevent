@@ -36,7 +36,7 @@ $(function () {
 
     // 渲染用户头像
     function renderAvater(user) {
-        const name = user.username || user.nickname;
+        const name = user.nickname || user.username;
         // 设置欢迎文本
         $('#welcome').html('欢迎&nbsp;&nbsp;' + name)
         if (user.user_pic) {
@@ -49,8 +49,6 @@ $(function () {
             $('.text-avatar').html(first).show()
         }
     }
-
-
 
 
 
